@@ -1,0 +1,124 @@
+:root {
+    --font-family: "Inter", sans-serif;
+}
+body {
+    background-color: #f1f5f9;
+    position: relative;
+}
+.brand {
+    z-index: 10;
+}
+.banner-section {
+    background-image: linear-gradient(to bottom, #03062f, #180b74);
+    padding-top: 104px;
+    min-height: 750px;
+}
+.banner-title {
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    font-family: var(--font-family);
+    font-weight: 600;
+}
+.banner-subtext {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+.sign-up-btn {
+    background-color: #2783F3;
+    border-radius: 4px;
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    border: none;
+    margin-top: 32px;
+}
+.owl-carousel .owl-item img {
+    width: unset;
+}
+.owl-theme .owl-nav.disabled+.owl-dots {
+    margin-top: 32px;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: rgb(255, 255, 255);
+}
+.form-box {
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    box-shadow: 0px 23px 23px 0px rgba(0,0,0,0.2);
+    padding: 32px;
+}
+.form-title {
+    color: #03062F;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--font-family);
+}
+.form-desc {
+    color: #03062F;
+    font-size: 1.125rem;
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+form label {
+    color: #03062F;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--font-family);   
+    display: block;         
+}
+.disabled-option {
+    color: #505050;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: var(--font-family);   
+}
+@media (min-width: 767px) {
+    .banner-section {
+        clip-path: polygon(100% 0, 100% 90%, 92% 100%, 0 81%, 0 0);
+    }
+    .form-box {
+        padding: 64px;
+    }
+}
+.banner-img-parent {
+    position: relative;
+}
+.banner-img-parent:before {
+    position: absolute;
+    content: url('assets/rotate-top.png');
+    top: 70px;
+    right: 50%;
+    transform: translateX(400%);
+    transform-origin: center center;
+    animation: rotate-top 5s linear infinite;
+}
+@keyframes rotate-top {
+    0% {transform: translateX(400%) rotate(0deg); }
+    50% {transform: translateX(400%) rotate(180deg); }
+    100% {transform: translateX(400%) rotate(360deg); }
+}
+.banner-img-parent:after {
+    position: absolute;
+    content: url('assets/rotate-bottom.png');
+    bottom: 20px;
+    left: 50%;
+    transform-origin: center center;
+    animation: rotate-bottom 5s linear infinite;
+}
+@keyframes rotate-bottom {
+    0% {transform: rotate(0deg); }
+    50% {transform: rotate(-180deg); }
+    100% {transform: rotate(-360deg); }
+}
+.polka-dots {
+    position: absolute;
+    top: -130px;
+    left: 100px;
+    z-index: -1;
+}
